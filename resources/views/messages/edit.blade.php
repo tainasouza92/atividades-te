@@ -1,4 +1,4 @@
-<h1>Formulário de Edição de Atividades (Editando Mensagem nº{{$messages->id}})</h1>
+<h1>Formulário de Edição de Atividades </h1>
 <hr>
 
 <form action="/messages/{{$messages->id}}" method="post"> 
