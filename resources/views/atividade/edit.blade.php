@@ -1,4 +1,4 @@
-<h1>Formulário de Edição de Atividades (Editando Atividade nº{{$atividade->id}})</h1>
+<h1>Formulário de Edição de Atividades</h1>
 <hr>
 
 <form action="/atividades/{{$atividade->id}}" method="post"> 
