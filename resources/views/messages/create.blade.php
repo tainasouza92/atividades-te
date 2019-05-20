@@ -1,7 +1,7 @@
 <h1>Formulário de Cadastro de Mensagens</h1>
 <hr>
 
-<form action="/messages" method="post"> 
+<form action="/messages" method="POST"> 
     {{ csrf_field() }}
     Título:    <input type="text" name="titulo">          <br><br>
     Texto:     <input type="text" name="texto">           <br><br>

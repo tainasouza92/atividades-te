@@ -37,7 +37,7 @@ class messageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($id)
+    public function store(Request $request) 
     {
         
             $mensagens = array(
@@ -45,7 +45,7 @@ class messageController extends Controller
                 'texto.required' => 'É obrigatória uma descrição para a mensagem',
                 'autor.required' => 'É obrigatório o cadastro do autor da mensagem',
             );
-           
+            
             $regras = array(
                 'titulo' => 'required|string|max:255',
                 'texto' => 'required',
@@ -53,8 +53,8 @@ class messageController extends Controller
             );
             
             $validador = Validator::make($request->all(), $regras, $mensagens);
-           {
-                return redirect('mensagem/create')
+            if ($validador->fails()) {
+                return redirect('/messages/create')
                 ->withErrors($validador)
                 ->withInput($request->all);
             }
